@@ -8,7 +8,7 @@ export default function RandomProject() {
   async function generate() {
     setLoading(true);
     try {
-      const response = await fetch("https://random-project-api.vercel.app/api/idea");
+      const response = await fetch("/api/idea");
       const responseData= await response.json();
       setData(responseData.data)
     } catch (error) {
